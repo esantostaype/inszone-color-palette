@@ -228,7 +228,7 @@ GROUPS.forEach(g => {
     sw.setAttribute('tabindex', '0');
     sw.setAttribute('aria-label', `Copiar ${col.hex}`);
     sw.title = col.hex;
-    sw.addEventListener('click', () => copyHex(col.hex, sw));
+    sw.addEventListener('click', () => copyHex(col.hex.slice(1), sw));
     sw.addEventListener('keydown', e => { if(e.key==='Enter'||e.key===' ') copyHex(col.hex, sw); });
 
     const meta = document.createElement('div');
